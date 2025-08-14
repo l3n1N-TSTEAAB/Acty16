@@ -20,17 +20,22 @@ class Usuario:
             return (f"CARNET: {carnet} - NOMBRE: {nombre} - CARRERA: {carrera}")
 
 
-def RegistroLibros:
+def RegistroLibros():
     def __init__(self):
         self.libros = {}
 
     def AgregarLibro(self):
-        try:
             codigo = input("Codigo de libro: ")
+            if codigo in self.libros:
+                print("El libro ya existe.\n")
+                return
 
+            titulo = input("titulo del libro: ")
+            autor = input("autor del libro: ")
+            año = input("año de publicacion: ")
 
-
-
+            self.libros[codigo] = Libro(titulo,autor,año)
+            print("LIBRO AGREGADO A BIBLIOTECA")
 class GestionarPrestamo:
     pass
 
