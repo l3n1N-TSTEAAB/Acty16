@@ -20,8 +20,14 @@ class Usuario:
             return (f"CARNET: {carnet} - NOMBRE: {nombre} - CARRERA: {carrera}")
 
 
-def AgregarLibros:
-    pass
+def RegistroLibros:
+    def __init__(self):
+        self.libros = {}
+
+    def AgregarLibro(self):
+        try:
+            codigo = input("Codigo de libro: ")
+
 
 
 
